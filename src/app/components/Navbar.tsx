@@ -10,7 +10,7 @@ type PageData = {
 };
 
 export default async function Navbar() {
-  const pagesData = await fetchData<PageData[]>('pages');
+  const { data: pagesData } = await fetchData<PageData[]>('pages');
 
   return (
     <header className="flex justify-center border-b-[1px] border-breally-light-gray">

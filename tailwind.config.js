@@ -12,6 +12,7 @@ module.exports = {
       'breally-gray': '#989898',
       'breally-purple': '#DAC2F2',
       'breally-green': '#5EDC4B',
+      'breally-error': '#f44336',
     },
     extend: {
       backgroundImage: {

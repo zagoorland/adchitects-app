@@ -2,12 +2,13 @@ import Image from 'next/image';
 import quotationMark from '../../public/quotation-mark.svg';
 import { fetchData } from './utils/api';
 import { Page, PagesData } from './types/api';
+import Newsletter from './sections/newsletter';
 
 const getPageData = async (url: string) => {
-  const allPages = await fetchData<PagesData[]>('pages');
+  const { data: allPages } = await fetchData<PagesData[]>('pages');
   const page = allPages.find((item) => item.url === url);
 
-  const data = await fetchData<Page>(`page/${page?.id}`);
+  const { data } = await fetchData<Page>(`page/${page?.id}`);
 
   return data;
 };
@@ -49,6 +50,7 @@ export default async function Page() {
           </p>
         </div>
       </section>
+      <Newsletter />
     </main>
   );
 }

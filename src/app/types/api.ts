@@ -15,3 +15,7 @@ export type Section = {
   img?: string;
   author: string;
 };
+
+export type NewsletterResponse = {
+  message: string;
+};
