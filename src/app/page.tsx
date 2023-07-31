@@ -20,7 +20,7 @@ export default async function Page() {
   const testimonial = data.sections.find((item) => item.type === 'testimonial');
 
   return (
-    <main className="flex min-h-screen flex-col ">
+    <main className="flex min-h-screen flex-col">
       <section className="flex pt-32 pb-40 justify-center w-full">
         <div className="flex items-center max-w-[1400px] w-full flex-wrap px-32 gap-x-44">
           <h1 className="text-5xl font-medium leading-[64px] flex-1">
