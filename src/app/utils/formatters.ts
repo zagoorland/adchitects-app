@@ -1,3 +1,6 @@
+export const capitalizeWord = (word: string) =>
+  word.charAt(0).toUpperCase() + word.slice(1);
+
 export const generatePageName = (url: string) => {
   const name = url.split('/')[1];
 
@@ -5,5 +8,5 @@ export const generatePageName = (url: string) => {
     return 'Home';
   }
 
-  return name.charAt(0).toUpperCase() + name.slice(1);
+  return capitalizeWord(name);
 };

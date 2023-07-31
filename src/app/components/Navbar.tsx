@@ -15,7 +15,9 @@ export default async function Navbar() {
   return (
     <header className="flex justify-center border-b-[1px] border-breally-light-gray">
       <nav className="flex items-center w-full max-w-[1400px] h-24 px-16">
-        <Image src={logo} alt="logo" className="mr-24" />
+        <Link href="/">
+          <Image src={logo} alt="logo" className="mr-24" />
+        </Link>
         {pagesData.map(({ url, id }) => (
           <Link href={url} key={id} className="mr-12">
             {generatePageName(url)}

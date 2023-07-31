@@ -12,6 +12,7 @@ export const fetchData = async <T>(
   const res = await fetch(`${BASE_URL}/${endpoint || ''}`, {
     headers: {
       Authorization: 'Basic ' + btoa('adchitects:jsrulezzz'),
+      'Content-Type': 'application/json',
     },
     ...options,
   });
